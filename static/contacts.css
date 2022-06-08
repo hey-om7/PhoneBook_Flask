@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+}
+
+.outerShell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.outerShell form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.outerShell form .boxContainer {
+    height: 60vh;
+    width: 50%;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    border-radius: 75px;
+    justify-content: space-evenly;
+
+}
+
+.outerShell .boxContainer h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    padding: 30px;
+}
+
+.outerShell .boxContainer .nameCard {
+    height: 70px;
+    width: 420px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.outerShell .boxContainer .nameCard input {
+    height: 110px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+
+}
+
+.outerShell .boxContainer .nameCard input::placeholder {
+    color: #C7C7C7;
+}
+
+.outerShell .boxContainer .phoneCard {
+    height: 70px;
+    width: 420px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.outerShell .boxContainer .phoneCard input {
+    height: 110px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+
+}
+
+.outerShell .boxContainer .phoneCard input::placeholder {
+    color: #C7C7C7;
+}
+
+.outerShell form .submitBtn {
+    height: 85px;
+    width: 305px;
+    background-color: #73BCFF;
+    z-index: 3;
+    position: fixed;
+    bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.outerShell form .submitBtn h1 {
+    color: white;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+
+.outerShell .submitBtn:hover {
+    background-color: #55adff;
+}

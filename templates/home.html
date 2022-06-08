@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneBook</title>
+    <meta name="theme-color" content="black">
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+</head>
+
+<body>
+    <div class="topbar">
+        <h1>Phonebook</h1>
+        <img src="{{searchIcon}}" alt="">
+    </div>
+    <div class="cards">
+        {%for contactIndex in contacts.index%}
+
+        <div class="singleCard">
+            <div class="col1">
+                <img src="{{profilePic}}" alt="">
+            </div>
+            <div class="col2">
+                <h1>
+                    {{contacts['Name'][contactIndex]}}
+                </h1>
+                <h2>
+                    {{contacts['Phone'][contactIndex]}}
+                </h2>
+            </div>
+            <div class="col3">
+                <img src="{{sharePic}}" alt="">
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <br>
+    <a href="{{ url_for( 'addContacts' ) }}">
+
+        <div class="floatingActionBtn">
+            <h1>+</h1>
+        </div>
+    </a>
+
+
+</body>
+
+</html>

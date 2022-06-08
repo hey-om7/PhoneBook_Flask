@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contacts</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='contacts.css')}}">
+</head>
+
+<body>
+    <div class="outerShell">
+        <form method="POST">
+            <div class="boxContainer">
+                <h1>Add Contacts</h1>
+
+                <div class="nameCard">
+                    <input type="text" placeholder="Name" name="name_input">
+                </div>
+                <div class="phoneCard">
+                    <input type="text" placeholder="Mobile Number" name="phone_input">
+                </div>
+            </div>
+            <button class="submitBtn" type="submit">
+                <h1>+</h1>
+            </button>
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>

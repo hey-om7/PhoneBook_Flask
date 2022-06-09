@@ -24,18 +24,51 @@
     flex: 1;
 }
 
-.topbar img {
+.topbar form button {
+    background-color: transparent;
+    border: none;
+}
+
+.topbar form {
+    display: flex;
+    flex-direction: row;
+}
+
+.topbar form button img {
     padding-right: 40px;
-    height: 50px;
-    height: 50px;
+    height: 45px;
+    height: 45px;
+    border: none;
+
 
 }
 
 .topbar img:hover {
-    padding-right: 50px;
-    height: 40px;
-    height: 40px;
+    padding-right: 45px;
+    height: 45px;
+    height: 45px;
 
+}
+
+.topbar form .searchCard {
+    height: 50px;
+    width: 70%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.topbar form .searchCard input {
+    padding-left: 20px;
+    height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    margin-right: 20px;
 }
 
 .cards {
@@ -106,7 +139,7 @@
     justify-content: center;
 }
 
-.cards .singleCard .col3 img {
+.cards .singleCard .col3 a img {
     height: 60px;
     width: 60px;
 }

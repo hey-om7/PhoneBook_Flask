@@ -16,10 +16,21 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/home")
+@app.route("/home",methods=['POST','GET'])
 def home():
     _temp1=getAllData()
-    print(_temp1)
+
+    if request.method == 'POST':
+        if(request.form['search_input']==''):
+            _temp1=getAllData()
+        else:
+            if(request.form['search_input'].isdigit()):
+                _temp1=_temp1[request.form['search_input'] == _temp1['Phone']]
+            else:
+                _temp1=_temp1[request.form['search_input'] == _temp1['Name']]
+
+
+
     pic1=os.path.join(app.config["UPLOAD_FOLDER"],'profile_avatar.png')
     pic2=os.path.join(app.config["UPLOAD_FOLDER"],'share_icon.png')
     pic3=os.path.join(app.config["UPLOAD_FOLDER"],'search_icon.png')
@@ -31,14 +42,11 @@ def addContacts():
         # print(request.form['name_input'])
         _temp2=getAllData()
         _data = {
-        "Name": request.form['name_input'],
-        "Phone": request.form['phone_input']
+        "Name": [request.form['name_input']],
+        "Phone": [request.form['phone_input']]
         }
         updateData(_data)
         
-        
-        # print(request.form['name_input'])
-        # print(request.form['phone_card'])
         return redirect('home')
     else:
         return render_template("addContacts.html")
